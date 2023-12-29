@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "reddit old",
+    "description": "Redirects normal reddit to old.reddit cause it removes the login window for nsfw content",
+    "version": "1.0",
+    "action": {
+        "default_popup": "reddit_old.html"
+      },
+    "content_scripts": [
+        {
+            "js": ["/app.js"],
+            "matches": [
+                "https://www.reddit.com/*",
+                "https://old.reddit.com/*"
+            ]
+        }
+    ]
+}
